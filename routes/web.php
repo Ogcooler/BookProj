@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/members', 'MembersController@show')->name('members11');
+
+Route::get('/list', function(){
+    return redirect()->route('members11');
+});
